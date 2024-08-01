@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #111;
+}
+
+/* Header and Navigation */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f6f6f6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+header nav {
+  height: 12vh;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo .u-v {
+  font-size: 50px;
+  color: #243ca0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 100%;
+}
+
+.logo .healthcare {
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+}
+
+header ul li {
+  margin-left: 0;
+  position: relative;
+}
+
+header ul li a {
+  position: relative;
+  display: block;
+  color: #111;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  transition: 0.2s ease-in-out;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+header ul li a.active,
+header ul li a:hover {
+  color: #fff;
+  background: #243ca0;
+}
+
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #243ca0;
+}
+
+.menu-toggle i {
+  pointer-events: none;
+}
+
+/* Home Section */
+section#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+}
+
+section#home .s-container {
+  max-width: 1200px;
+  width: 90%;
+}
+
+section#home h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+section#home p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+section#home .buttons a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.2rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+section#home .buttons a:hover {
+  background-color: #243ca0;
+  border-color: #243ca0;
+}
+
+/* About Us Section */
+section#about {
+  padding: 5rem 0;
+}
+
+section#about .s-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+section#about .content {
+  max-width: 600px;
+  text-align: center;
+}
+
+section#about h2 {
+  font-size: 2.5rem;
+  color: #243ca0;
+  margin-bottom: 1rem;
+}
+
+section#about p {
+  font-size: 1rem;
+  color: #111;
+  line-height: 1.5;
+}
+
+.hidden-paragraph {
+  display: none;
+}
+
+#view-more {
+  background-color: #243ca0;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.about-us-image {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+
+/* Products Section */
+section#products {
+  padding: 5rem 0;
+}
+
+section#products h2 {
+  font-size: 2.5rem;
+  color: #243ca0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.product-card {
+  max-width: 300px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.product-content {
+  padding: 1rem;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  color: #243ca0;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #111;
+}
+
+.view-more-btn,
+.view-less-btn {
+  display: none;
+  background-color: #243ca0;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  margin: 1rem auto;
+  display: block;
+  text-align: center;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.full-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 0.2rem;
+}
+
+/* Reviews Section */
+section#reviews {
+  padding: 5rem 0;
+  background-color: #f6f6f6;
+}
+
+.reviews-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.reviews-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.review-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.new-review {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.new-review form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.new-review textarea {
+  resize: none;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.new-review .rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.new-review select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+}
+
+.new-review button {
+  background-color: #243ca0;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+/* Contact Section */
+section#contact {
+  padding: 5rem 0;
+}
+
+section#contact .s-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+section#contact h2 {
+  font-size: 2.5rem;
+  color: #243ca0;
+}
+
+section#contact .founder {
+  text-align: center;
+}
+
+section#contact .founder img {
+  max-width: 150px;
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+section#contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+section#contact .info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+section#contact .info-item i {
+  font-size: 1.5rem;
+  color: #243ca0;
+}
+
+/* Back to Top Button */
+.back-top {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #243ca0;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 1.5rem;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.back-top:hover {
+  background-color: #111;
+}
+
+.back-top i {
+  pointer-events: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header nav {
+    width: 90%;
+  }
+
+  header ul {
+    display: none;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    position: absolute;
+    top: 12vh;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  header ul.active {
+    display: flex;
+  }
+
+  header ul li {
+    margin: 0;
+    width: 100%;
+  }
+
+  header ul li a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  section#home h1 {
+    font-size: 2rem;
+  }
+
+  section#home p {
+    font-size: 1rem;
+  }
+
+  .view-more-btn,
+  .view-less-btn {
+    display: block;
+  }
+
+  .overlay {
+    display: flex;
+  }
+}
+
+/* Footer (if needed) */
+footer {
+  background-color: #243ca0;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
